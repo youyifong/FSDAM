@@ -80,9 +80,15 @@ color of the predicted curve when which = scatterplot
 }
 \details{
 
-If the torch python package is not available, this function will stop. \cr
+If using the default reticulate python virtual env, may need to install some python packages via:
+reticulate::py_install("torch", pip = TRUE)
+reticulate::py_install("numpy", pip = TRUE)
+reticulate::py_install("pandas", pip = TRUE)
+
 \cr
-To make sure the right python installation is used, run reticulate::use_python("/app/easybuild/software/Python/3.7.4-foss-2016b/bin/python") in R before running this function for the first time.\cr
+Alternatively, use a different python kernel by 
+reticulate::use_python("/app/easybuild/software/Python/3.7.4-foss-2016b/bin/python") \cr
+
 \cr
 It is recommended that dat is scaled before calling fsdam.
 
